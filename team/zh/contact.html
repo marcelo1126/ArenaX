@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 | ArenaX</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#0d1b2a',
+                            800: '#1b263b',
+                            700: '#1e3a5f',
+                            600: '#2d4a6f',
+                        },
+                        gold: {
+                            500: '#c9a227',
+                            400: '#d4b445',
+                            300: '#e0c76a',
+                        },
+                        ivory: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        serif: ['Inter', 'Noto Serif SC', 'sans-serif'],
+                        display: ['Inter', 'Noto Serif SC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="font-serif bg-ivory text-navy-900">
+    <!-- Navigation -->
+    <nav class="bg-navy-900 text-ivory border-b border-gold-500/30 relative z-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="font-display text-2xl tracking-wide">
+                    <span class="text-gold-500">Arena</span><span class="text-navy-900" style="-webkit-text-stroke: 1px white; text-stroke: 1px white;">X</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-12">
+                    <a href="index.html" class="nav-link">首页</a>
+                    <a href="team.html" class="nav-link">团队</a>
+                    <a href="projects.html" class="nav-link">项目</a>
+                    <a href="contact.html" class="nav-link active">联系</a>
+                </div>
+                <div class="hidden md:flex items-center ml-8 border-l border-gold-500/30 pl-8">
+                    <div class="relative" id="lang-dropdown">
+                        <button class="flex items-center text-sm text-ivory hover:text-gold-400 transition" id="lang-btn">
+                            <span>中文</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-32 bg-navy-800 border border-gold-500/20 hidden" id="lang-menu">
+                            <a href="../contact.html" class="block px-4 py-2 text-sm text-ivory hover:text-gold-400 hover:bg-navy-700 transition">English</a>
+                            <a href="contact.html" class="block px-4 py-2 text-sm text-gold-400 bg-navy-700">中文</a>
+                            <a href="../ja/contact.html" class="block px-4 py-2 text-sm text-ivory hover:text-gold-400 hover:bg-navy-700 transition">日本語</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="md:hidden text-ivory" id="menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-navy-800 border-t border-gold-500/20" id="mobile-menu">
+            <div class="px-6 py-4 space-y-3">
+                <a href="index.html" class="block py-2 hover:text-gold-400 transition">首页</a>
+                <a href="team.html" class="block py-2 hover:text-gold-400 transition">团队</a>
+                <a href="projects.html" class="block py-2 hover:text-gold-400 transition">项目</a>
+                <a href="contact.html" class="block py-2 text-gold-400">联系</a>
+                <div class="border-t border-gold-500/20 pt-3 mt-3">
+                    <div class="text-xs text-gray-500 uppercase tracking-wider mb-2">Language</div>
+                    <div class="flex space-x-4">
+                        <a href="../contact.html" class="text-ivory hover:text-gold-400 transition">EN</a>
+                        <a href="contact.html" class="text-gold-400">中文</a>
+                        <a href="../ja/contact.html" class="text-ivory hover:text-gold-400 transition">日本語</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-navy-900 text-ivory py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-center space-x-4 mb-6">
+                <div class="h-px w-16 bg-gold-500"></div>
+                <span class="text-gold-500 text-sm tracking-[0.3em] uppercase">Contact Us</span>
+            </div>
+            <h1 class="font-display text-5xl md:text-6xl font-medium mb-6">联系我们</h1>
+            <p class="text-xl text-gray-300 max-w-2xl">
+                期待与您深入交流，共同探讨技术合作的无限可能
+            </p>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Contact Form -->
+                <div>
+                    <h2 class="font-display text-3xl text-navy-900 mb-2">发送询问</h2>
+                    <div class="h-px w-16 bg-gold-500 mb-8"></div>
+                    <p class="text-gray-600 mb-8">
+                        请填写以下表单，我们的团队将在 24 小时内与您取得联系。
+                    </p>
+
+                    <form action="https://formspree.io/f/xzdpaqjr" method="POST" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-navy-900 mb-2">
+                                    姓名 <span class="text-gold-500">*</span>
+                                </label>
+                                <input type="text" name="name" required
+                                    class="w-full px-4 py-3 border border-navy-900/20 bg-ivory focus:border-gold-500 focus:outline-none transition-colors"
+                                    placeholder="您的姓名">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-navy-900 mb-2">
+                                    公司
+                                </label>
+                                <input type="text" name="company"
+                                    class="w-full px-4 py-3 border border-navy-900/20 bg-ivory focus:border-gold-500 focus:outline-none transition-colors"
+                                    placeholder="您的公司名称">
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-navy-900 mb-2">
+                                    邮箱 <span class="text-gold-500">*</span>
+                                </label>
+                                <input type="email" name="_replyto" required
+                                    class="w-full px-4 py-3 border border-navy-900/20 bg-ivory focus:border-gold-500 focus:outline-none transition-colors"
+                                    placeholder="your@email.com">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-navy-900 mb-2">
+                                    电话
+                                </label>
+                                <input type="tel" name="phone"
+                                    class="w-full px-4 py-3 border border-navy-900/20 bg-ivory focus:border-gold-500 focus:outline-none transition-colors"
+                                    placeholder="+86 XXX XXXX XXXX">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-navy-900 mb-2">
+                                项目类型
+                            </label>
+                            <select name="project-type" class="w-full px-4 py-3 border border-navy-900/20 bg-ivory focus:border-gold-500 focus:outline-none transition-colors">
+                                <option value="">请选择项目类型</option>
+                                <option value="enterprise">企业级应用开发</option>
+                                <option value="mobile">移动应用开发</option>
+                                <option value="cloud">云架构与微服务</option>
+                                <option value="consulting">技术咨询</option>
+                                <option value="other">其他</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-navy-900 mb-2">
+                                项目描述 <span class="text-gold-500">*</span>
+                            </label>
+                            <textarea name="message" required rows="5"
+                                class="w-full px-4 py-3 border border-navy-900/20 bg-ivory focus:border-gold-500 focus:outline-none transition-colors resize-none"
+                                placeholder="请简要描述您的项目需求..."></textarea>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-navy-900 mb-2">
+                                预算范围
+                            </label>
+                            <select name="budget" class="w-full px-4 py-3 border border-navy-900/20 bg-ivory focus:border-gold-500 focus:outline-none transition-colors">
+                                <option value="">请选择预算范围</option>
+                                <option value="10-50">10万￥ - 50万￥</option>
+                                <option value="50-100">50万￥ - 100万￥</option>
+                                <option value="100-500">100万￥ - 500万￥</option>
+                                <option value="500+">500万￥以上</option>
+                                <option value="discuss">待商议</option>
+                            </select>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full px-8 py-4 bg-navy-900 text-ivory font-medium tracking-wide hover:bg-navy-800 transition-colors flex items-center justify-center">
+                            提交询问
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="font-display text-3xl text-navy-900 mb-2">联系方式</h2>
+                    <div class="h-px w-16 bg-gold-500 mb-8"></div>
+
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-navy-900 text-gold-500 flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="font-display text-lg text-navy-900 mb-1">办公地址</h3>
+                                <p class="text-gray-600">
+                                    来自世界各地<br>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-navy-900 text-gold-500 flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="font-display text-lg text-navy-900 mb-1">电子邮箱</h3>
+                                <p class="text-gray-600">
+                                    商务合作：loricamarcelo@outlook.com<br>
+                                </p>
+                            </div>
+                        </div>
+
+                    <!-- Map -->
+                    <div class="mt-12 group">
+                        <div class="aspect-video bg-navy-800 overflow-hidden">
+                            <img src="../../images/5.jpg" alt="位置地图" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-ivory border-t border-navy-900/10">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 text-sm tracking-[0.3em] uppercase">FAQ</span>
+                <h2 class="font-display text-3xl md:text-4xl text-navy-900 mt-4">常见问题</h2>
+                <div class="h-px w-24 bg-gold-500 mx-auto mt-6"></div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-white border border-navy-900/10 p-8">
+                    <h3 class="font-display text-xl text-navy-900 mb-4">项目合作的流程是怎样的？</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        我们的合作流程包括：需求沟通 → 方案设计 → 合同签订 → 项目开发 → 测试验收 → 上线维护。每个阶段都有明确的交付物和里程碑，确保项目透明可控。
+                    </p>
+                </div>
+
+                <div class="bg-white border border-navy-900/10 p-8">
+                    <h3 class="font-display text-xl text-navy-900 mb-4">你们通常如何收费？</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        我们采用项目制或人天制两种收费模式。具体费用取决于项目规模、技术难度和交付周期。我们会在充分了解需求后提供详细的报价方案。
+                    </p>
+                </div>
+
+                <div class="bg-white border border-navy-900/10 p-8">
+                    <h3 class="font-display text-xl text-navy-900 mb-4">项目上线后提供技术支持吗？</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        是的，我们为所有交付项目提供半年的维护期，包括 Bug 修复、安全更新和技术咨询。维护期后可选择续签维护合同。
+                    </p>
+                </div>
+
+                <div class="bg-white border border-navy-900/10 p-8">
+                    <h3 class="font-display text-xl text-navy-900 mb-4">可以承接紧急项目吗？</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        可以。我们有专门的快速响应团队，能够在短时间内组建项目组投入开发。但紧急项目可能需要支付额外的加急费用，具体请与我们沟通。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-ivory py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div class="md:col-span-2">
+                    <div class="font-display text-2xl mb-4">
+                        <span class="text-gold-500">Arena</span><span class="text-navy-900" style="-webkit-text-stroke: 1px white; text-stroke: 1px white;">X</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed max-w-md">
+                        专注于企业级软件解决方案的精英开发团队，拥有骑士精神，以技术创新推动业务发展。
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-sm tracking-wider uppercase mb-6 text-gold-500">导航</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="index.html" class="hover:text-gold-400 transition">首页</a></li>
+                        <li><a href="team.html" class="hover:text-gold-400 transition">团队</a></li>
+                        <li><a href="projects.html" class="hover:text-gold-400 transition">项目</a></li>
+                        <li><a href="contact.html" class="hover:text-gold-400 transition">联系</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-ivory/10 mt-12 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 ArenaX. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        document.getElementById('lang-btn').addEventListener('click', function(e) {
+            e.stopPropagation();
+            document.getElementById('lang-menu').classList.toggle('hidden');
+        });
+        document.addEventListener('click', function() {
+            document.getElementById('lang-menu').classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
+
+

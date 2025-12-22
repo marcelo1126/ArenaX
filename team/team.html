@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Team | ArenaX</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#0d1b2a',
+                            800: '#1b263b',
+                            700: '#1e3a5f',
+                            600: '#2d4a6f',
+                        },
+                        gold: {
+                            500: '#c9a227',
+                            400: '#d4b445',
+                            300: '#e0c76a',
+                        },
+                        ivory: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        serif: ['Inter', 'sans-serif'],
+                        display: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-serif bg-ivory text-navy-900">
+    <!-- Navigation -->
+    <nav class="bg-navy-900 text-ivory border-b border-gold-500/30 relative z-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="font-display text-2xl tracking-wide">
+                    <span class="text-gold-500">Arena</span><span class="text-navy-900" style="-webkit-text-stroke: 1px white; text-stroke: 1px white;">X</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-12">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="team.html" class="nav-link active">Team</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="hidden md:flex items-center ml-8 border-l border-gold-500/30 pl-8">
+                    <div class="relative" id="lang-dropdown">
+                        <button class="flex items-center text-sm text-ivory hover:text-gold-400 transition" id="lang-btn">
+                            <span>English</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-32 bg-navy-800 border border-gold-500/20 hidden" id="lang-menu">
+                            <a href="team.html" class="block px-4 py-2 text-sm text-gold-400 bg-navy-700">English</a>
+                            <a href="zh/team.html" class="block px-4 py-2 text-sm text-ivory hover:text-gold-400 hover:bg-navy-700 transition">中文</a>
+                            <a href="ja/team.html" class="block px-4 py-2 text-sm text-ivory hover:text-gold-400 hover:bg-navy-700 transition">日本語</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="md:hidden text-ivory" id="menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-navy-800 border-t border-gold-500/20" id="mobile-menu">
+            <div class="px-6 py-4 space-y-3">
+                <a href="index.html" class="block py-2 hover:text-gold-400 transition">Home</a>
+                <a href="team.html" class="block py-2 text-gold-400">Team</a>
+                <a href="projects.html" class="block py-2 hover:text-gold-400 transition">Projects</a>
+                <a href="contact.html" class="block py-2 hover:text-gold-400 transition">Contact</a>
+                <div class="border-t border-gold-500/20 pt-3 mt-3">
+                    <div class="text-xs text-gray-500 uppercase tracking-wider mb-2">Language</div>
+                    <div class="flex space-x-4">
+                        <a href="team.html" class="text-gold-400">EN</a>
+                        <a href="zh/team.html" class="text-ivory hover:text-gold-400 transition">中文</a>
+                        <a href="ja/team.html" class="text-ivory hover:text-gold-400 transition">日本語</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-navy-900 text-ivory py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-center space-x-4 mb-6">
+                <div class="h-px w-16 bg-gold-500"></div>
+                <span class="text-gold-500 text-sm tracking-[0.3em] uppercase">Our Team</span>
+            </div>
+            <h1 class="font-display text-5xl md:text-6xl font-medium mb-6">Core Team</h1>
+            <p class="text-xl text-gray-300 max-w-2xl">
+                Bringing together industry elites with deep technical expertise and professional excellence to deliver outstanding quality in every project
+            </p>
+        </div>
+    </header>
+
+    <!-- Leadership Section -->
+    <section class="py-20 bg-white border-b border-navy-900/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 text-sm tracking-[0.3em] uppercase">Leadership</span>
+                <h2 class="font-display text-3xl md:text-4xl text-navy-900 mt-4">Leadership Team</h2>
+                <div class="h-px w-24 bg-gold-500 mx-auto mt-6"></div>
+            </div>
+
+            <!-- Founder/CEO -->
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+                <div class="order-2 lg:order-1">
+                    <span class="text-gold-500 text-sm tracking-wider uppercase">Founder & Team Manager</span>
+                    <h3 class="font-display text-4xl text-navy-900 mt-2 mb-6">Kile</h3>
+                    <div class="h-px w-16 bg-gold-500 mb-6"></div>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        With 7 years of software development and architecture design experience, previously served as core development engineer and technical leader at multiple tech companies. Focused on enterprise application architecture design and technical team management, leading teams to deliver numerous large-scale projects.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        Graduated from University of Science and Technology Beijing with a degree in Computer Science and Technology. Passionate about the perfect combination of technological innovation and engineering practice. Believing in "technology serves people," committed to building an elite team with responsibility and capability.
+                    </p>
+                    <div class="flex items-center space-x-6">
+                        <div class="text-center">
+                            <div class="font-display text-2xl text-navy-800">6+</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wider">Years Exp.</div>
+                        </div>
+                        <div class="h-8 w-px bg-navy-900/20"></div>
+                        <div class="text-center">
+                            <div class="font-display text-2xl text-navy-800">10+</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wider">Projects</div>
+                        </div>
+                        <div class="h-8 w-px bg-navy-900/20"></div>
+                        <div class="text-center">
+                            <div class="font-display text-2xl text-navy-800">USTB</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wider">University</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <div class="relative group">
+                        <div class="aspect-[4/5] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="w-32 h-32 bg-navy-700 group-hover:bg-navy-600 rounded-full flex items-center justify-center transition-colors">
+                                <span class="font-display text-5xl text-gold-500">K</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                        <div class="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-gold-500"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Members Section -->
+    <section class="py-20 bg-ivory">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 text-sm tracking-[0.3em] uppercase">Core Members</span>
+                <h2 class="font-display text-3xl md:text-4xl text-navy-900 mt-4">Core Members</h2>
+                <div class="h-px w-24 bg-gold-500 mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Member 1 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors" style="border: 2px solid #b8860b; box-shadow: inset 0 0 0 3px #1e3a5f, inset 0 0 0 4px #b8860b;">
+                                    <span class="font-display text-2xl text-gold-500">C</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">Tech Lead</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Conan</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            8 years data engineering exp.<br>
+                            AI/ML/DL/NLP Expert
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors border border-gold-500">
+                                    <span class="font-display text-2xl text-gold-500">A</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                        <!-- Hover Overlay -->
+                        <div class="absolute inset-0 bg-navy-900/95 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center p-4 border border-gold-500/30">
+                                <p class="text-gold-400 font-display text-lg">Hong Kong Math Olympiad Runner-up</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">Chief Math Scientist (M.S.)</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Ada</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            7 years math modeling exp.<br>
+                            AI/ML/DL/NLP Expert
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">M</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">Chief Backend Engineer</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Maya</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            6 years backend dev exp.<br>
+                            C/C++/Java/Python/Golang Expert
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">A</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">Chief Fullstack Engineer</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Alex</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            6 years fullstack dev exp.<br>
+                            Java/Python/React/Node.js Expert
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 5 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">E</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">Senior Physics Scientist (M.S.)</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Elon</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            7 years physics modeling exp.<br>
+                            Algorithm Design Expert
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 6 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">S</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">Senior Math Scientist (M.S.)</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Sam</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            8 years math modeling exp.<br>
+                            AI/ML/DL/NLP Expert
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 7 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors border border-gold-500">
+                                    <span class="font-display text-2xl text-gold-500">P</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                        <!-- Hover Overlay -->
+                        <div class="absolute inset-0 bg-navy-900/95 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center p-4 border border-gold-500/30">
+                                <p class="text-gold-400 font-display text-lg">SCI Journal High Impact Published Author</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">Senior Math Scientist (M.S.)</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Pinn</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            8 years math modeling exp.<br>
+                            AI/ML/DL/NLP Expert
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 8 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">Z</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">Senior Backend Engineer</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Z</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            6 years backend dev exp.<br>
+                            Web scraping/Data extraction
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 9 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">D</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">Senior Backend Engineer</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Dash</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            4 years backend dev exp.<br>
+                            Python/Node.js/Golang
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 10 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">B</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">Backend Engineer</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Bee</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            4 years backend dev exp.<br>
+                            Python/Node.js/Web scraping
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 11 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">C</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">Backend Engineer</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Corn</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            2 years backend dev exp.<br>
+                            Python/Node.js/Java
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 12 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">N</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">Backend Engineer</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Newbie</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            2 years backend dev exp.<br>
+                            Python/Node.js/Golang
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20 bg-navy-900 text-ivory">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 text-sm tracking-[0.3em] uppercase">Our Culture</span>
+                <h2 class="font-display text-3xl md:text-4xl mt-4">Team Culture</h2>
+                <div class="h-px w-24 bg-gold-500 mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8">
+                    <div class="w-16 h-16 border border-gold-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl text-gold-400 mb-4">Quality First</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        We hold our code to near-exacting standards, with every line rigorously reviewed to ensure we deliver products that stand the test of time.
+                    </p>
+                </div>
+
+                <div class="text-center p-8">
+                    <div class="w-16 h-16 border border-gold-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl text-gold-400 mb-4">Continuous Learning</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Technology never stops evolving, and neither do we. We encourage team members to continuously learn and share knowledge, staying sharp on industry trends.
+                    </p>
+                </div>
+
+                <div class="text-center p-8">
+                    <div class="w-16 h-16 border border-gold-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl text-gold-400 mb-4">Collaborative Success</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        We believe the power of the team exceeds that of individuals. Through efficient collaboration, we ensure every member's strengths are fully utilized.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us CTA -->
+    <section class="py-20 bg-ivory border-t border-navy-900/10">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-display text-3xl md:text-4xl text-navy-900 mb-6">Join Us</h2>
+            <p class="text-gray-600 mb-10 text-lg">
+                We're always looking for like-minded talented individuals. If you share our pursuit of excellence, welcome to ArenaX
+            </p>
+            <a href="contact.html" class="inline-flex items-center px-10 py-4 bg-navy-900 text-ivory font-medium tracking-wide hover:bg-navy-800 transition-colors">
+                Contact Us
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-ivory py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div class="md:col-span-2">
+                    <div class="font-display text-2xl mb-4">
+                        <span class="text-gold-500">Arena</span><span class="text-navy-900" style="-webkit-text-stroke: 1px white; text-stroke: 1px white;">X</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed max-w-md">
+                        An elite development team focused on enterprise software solutions, driven by chivalrous spirit and technological innovation to accelerate business growth.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-sm tracking-wider uppercase mb-6 text-gold-500">Navigation</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="index.html" class="hover:text-gold-400 transition">Home</a></li>
+                        <li><a href="team.html" class="hover:text-gold-400 transition">Team</a></li>
+                        <li><a href="projects.html" class="hover:text-gold-400 transition">Projects</a></li>
+                        <li><a href="contact.html" class="hover:text-gold-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm tracking-wider uppercase mb-6 text-gold-500">Contact</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li>loricamarcelo@outlook.com</li>
+                        <li>Worldwide</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-ivory/10 mt-12 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 ArenaX. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        document.getElementById('lang-btn').addEventListener('click', function(e) {
+            e.stopPropagation();
+            document.getElementById('lang-menu').classList.toggle('hidden');
+        });
+        document.addEventListener('click', function() {
+            document.getElementById('lang-menu').classList.add('hidden');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "WebFetch(domain:affine.io)",
+      "WebFetch(domain:Ridges.AI)",
+      "WebFetch(domain:www.BlueSphereAI.com)",
+      "WebFetch(domain:www.bitmind.ai)",
+      "WebSearch",
+      "WebFetch(domain:disqus.com)",
+      "Bash(dir:*)",
+      "WebFetch(domain:www.ridges.ai)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:www.affine.io)",
+      "WebFetch(domain:bitmind.ai)",
+      "Bash(python -m http.server:*)",
+      "Bash(timeout:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(mv:*)",
+      "Bash(cat:*)",
+      "Bash(dir /s /b)",
+      "Bash(git ls-tree:*)",
+      "Bash(grep:*)",
+      "Bash(python extract_files.py:*)",
+      "Bash(git clone:*)"
+    ]
+  }
+}

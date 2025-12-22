@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>核心团队 | ArenaX</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#0d1b2a',
+                            800: '#1b263b',
+                            700: '#1e3a5f',
+                            600: '#2d4a6f',
+                        },
+                        gold: {
+                            500: '#c9a227',
+                            400: '#d4b445',
+                            300: '#e0c76a',
+                        },
+                        ivory: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        serif: ['Inter', 'Noto Serif SC', 'sans-serif'],
+                        display: ['Inter', 'Noto Serif SC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="font-serif bg-ivory text-navy-900">
+    <!-- Navigation -->
+    <nav class="bg-navy-900 text-ivory border-b border-gold-500/30 relative z-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="font-display text-2xl tracking-wide">
+                    <span class="text-gold-500">Arena</span><span class="text-navy-900" style="-webkit-text-stroke: 1px white; text-stroke: 1px white;">X</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-12">
+                    <a href="index.html" class="nav-link">首页</a>
+                    <a href="team.html" class="nav-link active">团队</a>
+                    <a href="projects.html" class="nav-link">项目</a>
+                    <a href="contact.html" class="nav-link">联系</a>
+                </div>
+                <div class="hidden md:flex items-center ml-8 border-l border-gold-500/30 pl-8">
+                    <div class="relative" id="lang-dropdown">
+                        <button class="flex items-center text-sm text-ivory hover:text-gold-400 transition" id="lang-btn">
+                            <span>中文</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-32 bg-navy-800 border border-gold-500/20 hidden" id="lang-menu">
+                            <a href="../team.html" class="block px-4 py-2 text-sm text-ivory hover:text-gold-400 hover:bg-navy-700 transition">English</a>
+                            <a href="team.html" class="block px-4 py-2 text-sm text-gold-400 bg-navy-700">中文</a>
+                            <a href="../ja/team.html" class="block px-4 py-2 text-sm text-ivory hover:text-gold-400 hover:bg-navy-700 transition">日本語</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="md:hidden text-ivory" id="menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-navy-800 border-t border-gold-500/20" id="mobile-menu">
+            <div class="px-6 py-4 space-y-3">
+                <a href="index.html" class="block py-2 hover:text-gold-400 transition">首页</a>
+                <a href="team.html" class="block py-2 text-gold-400">团队</a>
+                <a href="projects.html" class="block py-2 hover:text-gold-400 transition">项目</a>
+                <a href="contact.html" class="block py-2 hover:text-gold-400 transition">联系</a>
+                <div class="border-t border-gold-500/20 pt-3 mt-3">
+                    <div class="text-xs text-gray-500 uppercase tracking-wider mb-2">Language</div>
+                    <div class="flex space-x-4">
+                        <a href="../team.html" class="text-ivory hover:text-gold-400 transition">EN</a>
+                        <a href="team.html" class="text-gold-400">中文</a>
+                        <a href="../ja/team.html" class="text-ivory hover:text-gold-400 transition">日本語</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-navy-900 text-ivory py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-center space-x-4 mb-6">
+                <div class="h-px w-16 bg-gold-500"></div>
+                <span class="text-gold-500 text-sm tracking-[0.3em] uppercase">Our Team</span>
+            </div>
+            <h1 class="font-display text-5xl md:text-6xl font-medium mb-6">核心团队</h1>
+            <p class="text-xl text-gray-300 max-w-2xl">
+                汇聚行业精英，以深厚的技术积累和专业素养，为每个项目注入卓越品质
+            </p>
+        </div>
+    </header>
+
+    <!-- Leadership Section -->
+    <section class="py-20 bg-white border-b border-navy-900/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 text-sm tracking-[0.3em] uppercase">Leadership</span>
+                <h2 class="font-display text-3xl md:text-4xl text-navy-900 mt-4">领导团队</h2>
+                <div class="h-px w-24 bg-gold-500 mx-auto mt-6"></div>
+            </div>
+
+            <!-- Founder/CEO -->
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+                <div class="order-2 lg:order-1">
+                    <span class="text-gold-500 text-sm tracking-wider uppercase">创立者 & 团队负责人</span>
+                    <h3 class="font-display text-4xl text-navy-900 mt-2 mb-6">Kile</h3>
+                    <div class="h-px w-16 bg-gold-500 mb-6"></div>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        拥有7年软件开发与架构设计经验，曾任职于多家科技企业担任技术顾问和最高产品管。专注于企业级应用架构设计和技术团队管理，带领团队交付过多数大型项目。
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        毕业于北京科技大学计算机科学与技术专业，热衷于技术创新与工程实践的完美结合。坚信"技术服务于人"的理念，致力于打造一支有担当、有能力的精英团队。
+                    </p>
+                    <div class="flex items-center space-x-6">
+                        <div class="text-center">
+                            <div class="font-display text-2xl text-navy-800">6+</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wider">年经验</div>
+                        </div>
+                        <div class="h-8 w-px bg-navy-900/20"></div>
+                        <div class="text-center">
+                            <div class="font-display text-2xl text-navy-800">10+</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wider">项目数量</div>
+                        </div>
+                        <div class="h-8 w-px bg-navy-900/20"></div>
+                        <div class="text-center">
+                            <div class="font-display text-2xl text-navy-800">北科大</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wider">毕业院校</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <div class="relative group">
+                        <div class="aspect-[4/5] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="w-32 h-32 bg-navy-700 group-hover:bg-navy-600 rounded-full flex items-center justify-center transition-colors">
+                                <span class="font-display text-5xl text-gold-500">K</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                        <div class="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-gold-500"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Members Section -->
+    <section class="py-20 bg-ivory">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 text-sm tracking-[0.3em] uppercase">Core Members</span>
+                <h2 class="font-display text-3xl md:text-4xl text-navy-900 mt-4">核心成员</h2>
+                <div class="h-px w-24 bg-gold-500 mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Member 1 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors" style="border: 2px solid #b8860b; box-shadow: inset 0 0 0 3px #1e3a5f, inset 0 0 0 4px #b8860b;">
+                                    <span class="font-display text-2xl text-gold-500">C</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">技术领导</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Conan</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            8年数据工程师经验<br>
+                            AI/ML/DL/NLP专家
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors border border-gold-500">
+                                    <span class="font-display text-2xl text-gold-500">A</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                        <!-- Hover Overlay -->
+                        <div class="absolute inset-0 bg-navy-900/95 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center p-4 border border-gold-500/30">
+                                <p class="text-gold-400 font-display text-lg">香港数学奥运会亚军</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">首席数学科学家(数学硕士)</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Ada</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            7年数学建模经验<br>
+                            AI/ML/DL/NLP专家
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">M</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">首席后端工程师</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Maya</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            6年后端开发经验<br>
+                            C/C++/Java/Python/Golang专家
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">A</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">首席全栈工程师</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Alex</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            6年全栈开发经验<br>
+                            Java/Python/React/Node.js专家
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 5 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">E</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">深资物理学科学家(物理学硕士)</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Elon</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            7年物理建模经验<br>
+                            算法设计专家
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 6 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">S</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">深资数学科学家(数学硕士)</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Sam</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            8年数学建模经验<br>
+                            AI/ML/DL/NLP专家
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 7 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors border border-gold-500">
+                                    <span class="font-display text-2xl text-gold-500">P</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                        <!-- Hover Overlay -->
+                        <div class="absolute inset-0 bg-navy-900/95 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center p-4 border border-gold-500/30">
+                                <p class="text-gold-400 font-display text-lg">SCI杂志高分发表者</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">深资数学科学家(数学硕士)</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Pinn</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            8年数学建模经验<br>
+                            AI/ML/DL/NLP专家
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 8 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">Z</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">深资后端工程师</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Z</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            6年后端开发经验<br>
+                            Web scraping/Data extraction
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 9 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">D</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">高级后端工程师</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Dash</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            4年后端开发经验<br>
+                            Python/Node.js/Golang
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 10 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">B</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">后端工程师</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Bee</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            4年后端开发经验<br>
+                            Python/Node.js/Web scraping
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 11 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">C</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">后端工程师</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Corn</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            2年后端开发经验<br>
+                            Python/Node.js/Java
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 12 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">N</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">后端工程师</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Newbie</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            2年后端开发经验<br>
+                            Python/Node.js/Golang
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20 bg-navy-900 text-ivory">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 text-sm tracking-[0.3em] uppercase">Our Culture</span>
+                <h2 class="font-display text-3xl md:text-4xl mt-4">团队文化</h2>
+                <div class="h-px w-24 bg-gold-500 mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8">
+                    <div class="w-16 h-16 border border-gold-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl text-gold-400 mb-4">品质至上</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        我们对代码质量有着近乎苛刻的要求，每一行代码都经过严格审查，确保交付的是经得起考验的产品。
+                    </p>
+                </div>
+
+                <div class="text-center p-8">
+                    <div class="w-16 h-16 border border-gold-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl text-gold-400 mb-4">持续学习</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        技术永远在进步，我们鼓励团队成员持续学习，定期进行技术分享，保持对行业前沿的敏锐洞察。
+                    </p>
+                </div>
+
+                <div class="text-center p-8">
+                    <div class="w-16 h-16 border border-gold-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl text-gold-400 mb-4">协作共赢</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        我们相信团队的力量大于个人，通过高效的协作机制，让每个成员的专长得到充分发挥。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us CTA -->
+    <section class="py-20 bg-ivory border-t border-navy-900/10">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-display text-3xl md:text-4xl text-navy-900 mb-6">加入我们</h2>
+            <p class="text-gray-600 mb-10 text-lg">
+                我们始终在寻找志同道合的优秀人才，如果你对卓越有着执着追求，欢迎加入ArenaX
+            </p>
+            <a href="contact.html" class="inline-flex items-center px-10 py-4 bg-navy-900 text-ivory font-medium tracking-wide hover:bg-navy-800 transition-colors">
+                联系我们
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-ivory py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div class="md:col-span-2">
+                    <div class="font-display text-2xl mb-4">
+                        <span class="text-gold-500">Arena</span><span class="text-navy-900" style="-webkit-text-stroke: 1px white; text-stroke: 1px white;">X</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed max-w-md">
+                        专注于企业级软件解决方案的精英开发团队，拥有骑士精神，以技术创新推动业务发展。
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-sm tracking-wider uppercase mb-6 text-gold-500">导航</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="index.html" class="hover:text-gold-400 transition">首页</a></li>
+                        <li><a href="team.html" class="hover:text-gold-400 transition">团队</a></li>
+                        <li><a href="projects.html" class="hover:text-gold-400 transition">项目</a></li>
+                        <li><a href="contact.html" class="hover:text-gold-400 transition">联系</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm tracking-wider uppercase mb-6 text-gold-500">联系方式</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li>loricamarcelo@outlook.com</li>
+                        <li>世界各地</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-ivory/10 mt-12 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 ArenaX. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        document.getElementById('lang-btn').addEventListener('click', function(e) {
+            e.stopPropagation();
+            document.getElementById('lang-menu').classList.toggle('hidden');
+        });
+        document.addEventListener('click', function() {
+            document.getElementById('lang-menu').classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
+
+

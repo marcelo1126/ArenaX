@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArenaX | 卓越开发团队</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#0d1b2a',
+                            800: '#1b263b',
+                            700: '#1e3a5f',
+                            600: '#2d4a6f',
+                        },
+                        gold: {
+                            500: '#c9a227',
+                            400: '#d4b445',
+                            300: '#e0c76a',
+                        },
+                        ivory: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        serif: ['Inter', 'Noto Serif SC', 'sans-serif'],
+                        display: ['Inter', 'Noto Serif SC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="font-serif bg-ivory text-navy-900">
+    <!-- Navigation -->
+    <nav class="bg-navy-900 text-ivory border-b border-gold-500/30 relative z-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="font-display text-2xl tracking-wide">
+                    <span class="text-gold-500">Arena</span><span class="text-navy-900" style="-webkit-text-stroke: 1px white; text-stroke: 1px white;">X</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-12">
+                    <a href="index.html" class="nav-link active">首页</a>
+                    <a href="team.html" class="nav-link">团队</a>
+                    <a href="projects.html" class="nav-link">项目</a>
+                    <a href="contact.html" class="nav-link">联系</a>
+                </div>
+                <div class="hidden md:flex items-center ml-8 border-l border-gold-500/30 pl-8">
+                    <div class="relative" id="lang-dropdown">
+                        <button class="flex items-center text-sm text-ivory hover:text-gold-400 transition" id="lang-btn">
+                            <span>中文</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-32 bg-navy-800 border border-gold-500/20 hidden" id="lang-menu">
+                            <a href="../index.html" class="block px-4 py-2 text-sm text-ivory hover:text-gold-400 hover:bg-navy-700 transition">English</a>
+                            <a href="index.html" class="block px-4 py-2 text-sm text-gold-400 bg-navy-700">中文</a>
+                            <a href="../ja/index.html" class="block px-4 py-2 text-sm text-ivory hover:text-gold-400 hover:bg-navy-700 transition">日本語</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="md:hidden text-ivory" id="menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-navy-800 border-t border-gold-500/20" id="mobile-menu">
+            <div class="px-6 py-4 space-y-3">
+                <a href="index.html" class="block py-2 text-gold-400">首页</a>
+                <a href="team.html" class="block py-2 hover:text-gold-400 transition">团队</a>
+                <a href="projects.html" class="block py-2 hover:text-gold-400 transition">项目</a>
+                <a href="contact.html" class="block py-2 hover:text-gold-400 transition">联系</a>
+                <div class="border-t border-gold-500/20 pt-3 mt-3">
+                    <div class="text-xs text-gray-500 uppercase tracking-wider mb-2">Language</div>
+                    <div class="flex space-x-4">
+                        <a href="../index.html" class="text-ivory hover:text-gold-400 transition">EN</a>
+                        <a href="index.html" class="text-gold-400">中文</a>
+                        <a href="../ja/index.html" class="text-ivory hover:text-gold-400 transition">日本語</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-navy-900 text-ivory relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23c9a227\' fill-opacity=\'0.15\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        </div>
+        <div class="max-w-6xl mx-auto px-6 py-32 relative">
+            <div class="max-w-3xl">
+                <div class="flex items-center space-x-4 mb-8">
+                    <div class="h-px w-16 bg-gold-500"></div>
+                    <span class="text-gold-500 text-sm tracking-[0.3em] uppercase">Since 2018</span>
+                </div>
+                <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-medium leading-tight mb-8">
+                    以技术为基<br>
+                    <span class="text-gold-400">铸就卓越</span>
+                </h1>
+                <p class="text-xl text-gray-300 leading-relaxed mb-12 max-w-2xl">
+                    我们是一支专注于企业级解决方案的精英开发团队，拥有骑士精神，秉承严谨、创新、卓越的理念，为客户创造持久价值。
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="team.html" class="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-900 font-medium tracking-wide hover:bg-gold-400 transition-colors">
+                        认识我们的团队
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                    <a href="projects.html" class="inline-flex items-center justify-center px-8 py-4 border border-ivory/30 text-ivory hover:border-gold-500 hover:text-gold-400 transition-colors">
+                        查看项目案例
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <section class="border-y border-navy-900/10 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4">
+                <div class="px-6 py-12 text-center border-r border-navy-900/10">
+                    <div class="font-display text-4xl md:text-5xl text-navy-800 mb-2">7+</div>
+                    <div class="text-sm tracking-wider text-gray-600 uppercase">年行业经验</div>
+                </div>
+                <div class="px-6 py-12 text-center md:border-r border-navy-900/10">
+                    <div class="font-display text-4xl md:text-5xl text-navy-800 mb-2">30+</div>
+                    <div class="text-sm tracking-wider text-gray-600 uppercase">交付项目</div>
+                </div>
+                <div class="px-6 py-12 text-center border-r border-navy-900/10 border-t md:border-t-0">
+                    <div class="font-display text-4xl md:text-5xl text-navy-800 mb-2">20+</div>
+                    <div class="text-sm tracking-wider text-gray-600 uppercase">企业客户</div>
+                </div>
+                <div class="px-6 py-12 text-center border-t md:border-t-0">
+                    <div class="font-display text-4xl md:text-5xl text-navy-800 mb-2">99%</div>
+                    <div class="text-sm tracking-wider text-gray-600 uppercase">客户满意度</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-24 bg-ivory">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 text-sm tracking-[0.3em] uppercase">Our Expertise</span>
+                <h2 class="font-display text-4xl md:text-5xl text-navy-900 mt-4">专业服务领域</h2>
+                <div class="h-px w-24 bg-gold-500 mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-10 border border-navy-900/10 hover:border-gold-500/50 transition-colors group">
+                    <div class="w-14 h-14 bg-navy-900 text-gold-500 flex items-center justify-center mb-6 group-hover:bg-gold-500 group-hover:text-navy-900 transition-colors">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl text-navy-900 mb-4">企业级应用开发</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        构建稳定、可扩展的企业级应用系统，涵盖 ERP、CRM、OA 等核心业务系统的定制开发。
+                    </p>
+                </div>
+
+                <div class="bg-white p-10 border border-navy-900/10 hover:border-gold-500/50 transition-colors group">
+                    <div class="w-14 h-14 bg-navy-900 text-gold-500 flex items-center justify-center mb-6 group-hover:bg-gold-500 group-hover:text-navy-900 transition-colors">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl text-navy-900 mb-4">云架构与微服务</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        基于云原生技术栈，设计和实施高可用、弹性伸缩的分布式系统架构解决方案。
+                    </p>
+                </div>
+
+                <div class="bg-white p-10 border border-navy-900/10 hover:border-gold-500/50 transition-colors group">
+                    <div class="w-14 h-14 bg-navy-900 text-gold-500 flex items-center justify-center mb-6 group-hover:bg-gold-500 group-hover:text-navy-900 transition-colors">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M3 9h2m14 0h2M3 15h2m14 0h2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h0m6 0h0m-5 4h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl text-navy-900 mb-4">人工智能开发</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        提供机器学习、深度学习与自然语言处理解决方案，助力企业实现智能化升级与数据驱动决策。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="py-24 bg-navy-900 text-ivory">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-gold-500 text-sm tracking-[0.3em] uppercase">Our Philosophy</span>
+                    <h2 class="font-display text-4xl md:text-5xl mt-4 mb-8">我们的理念</h2>
+                    <div class="h-px w-24 bg-gold-500 mb-8"></div>
+                    <p class="text-xl text-gray-300 leading-relaxed mb-8">
+                        "技术的真正价值，在于为人类创造更好的未来。我们不仅编写代码，更是在构建连接人与可能性的桥梁。"
+                    </p>
+                    <p class="text-gray-400 leading-relaxed">
+                        在ArenaX，每一行代码都承载着对卓越的追求。我们相信，优秀的软件不仅要功能完备，更要体现出工匠精神——简洁、高效、经得起时间考验。
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-navy-800 p-8 border-l-2 border-gold-500">
+                        <div class="font-display text-3xl text-gold-400 mb-3">严谨</div>
+                        <p class="text-gray-400 text-sm">对每个细节的极致把控</p>
+                    </div>
+                    <div class="bg-navy-800 p-8 border-l-2 border-gold-500">
+                        <div class="font-display text-3xl text-gold-400 mb-3">创新</div>
+                        <p class="text-gray-400 text-sm">持续探索技术边界</p>
+                    </div>
+                    <div class="bg-navy-800 p-8 border-l-2 border-gold-500">
+                        <div class="font-display text-3xl text-gold-400 mb-3">协作</div>
+                        <p class="text-gray-400 text-sm">团队协同创造价值</p>
+                    </div>
+                    <div class="bg-navy-800 p-8 border-l-2 border-gold-500">
+                        <div class="font-display text-3xl text-gold-400 mb-3">担当</div>
+                        <p class="text-gray-400 text-sm">对成果负责到底</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-ivory border-t border-navy-900/10">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-display text-3xl md:text-4xl text-navy-900 mb-6">准备开启合作？</h2>
+            <p class="text-gray-600 mb-10 text-lg">
+                与我们的团队深入交流，探讨如何将您的愿景转化为现实
+            </p>
+            <a href="contact.html" class="inline-flex items-center px-10 py-4 bg-navy-900 text-ivory font-medium tracking-wide hover:bg-navy-800 transition-colors">
+                联系我们
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-ivory py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div class="md:col-span-2">
+                    <div class="font-display text-2xl mb-4">
+                        <span class="text-gold-500">Arena</span><span class="text-navy-900" style="-webkit-text-stroke: 1px white; text-stroke: 1px white;">X</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed max-w-md">
+                        专注于企业级软件解决方案的精英开发团队，拥有骑士精神，以技术创新推动业务发展。
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-sm tracking-wider uppercase mb-6 text-gold-500">导航</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="index.html" class="hover:text-gold-400 transition">首页</a></li>
+                        <li><a href="team.html" class="hover:text-gold-400 transition">团队</a></li>
+                        <li><a href="projects.html" class="hover:text-gold-400 transition">项目</a></li>
+                        <li><a href="contact.html" class="hover:text-gold-400 transition">联系</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm tracking-wider uppercase mb-6 text-gold-500">联系方式</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li>loricamarcelo@outlook.com</li>
+                        <li>世界各地</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-ivory/10 mt-12 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 ArenaX. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Language dropdown toggle
+        document.getElementById('lang-btn').addEventListener('click', function(e) {
+            e.stopPropagation();
+            document.getElementById('lang-menu').classList.toggle('hidden');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function() {
+            document.getElementById('lang-menu').classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
+
+

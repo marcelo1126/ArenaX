@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArenaX | エリート開発チーム</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#0d1b2a',
+                            800: '#1b263b',
+                            700: '#1e3a5f',
+                            600: '#2d4a6f',
+                        },
+                        gold: {
+                            500: '#c9a227',
+                            400: '#d4b445',
+                            300: '#e0c76a',
+                        },
+                        ivory: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        serif: ['Inter', 'Noto Serif JP', 'sans-serif'],
+                        display: ['Inter', 'Noto Serif JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="font-serif bg-ivory text-navy-900">
+    <!-- Navigation -->
+    <nav class="bg-navy-900 text-ivory border-b border-gold-500/30 relative z-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="font-display text-2xl tracking-wide">
+                    <span class="text-gold-500">Arena</span><span class="text-navy-900" style="-webkit-text-stroke: 1px white; text-stroke: 1px white;">X</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-12">
+                    <a href="index.html" class="nav-link active">ホーム</a>
+                    <a href="team.html" class="nav-link">チーム</a>
+                    <a href="projects.html" class="nav-link">プロジェクト</a>
+                    <a href="contact.html" class="nav-link">お問い合わせ</a>
+                </div>
+                <div class="hidden md:flex items-center ml-8 border-l border-gold-500/30 pl-8">
+                    <div class="relative" id="lang-dropdown">
+                        <button class="flex items-center text-sm text-ivory hover:text-gold-400 transition" id="lang-btn">
+                            <span>日本語</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-32 bg-navy-800 border border-gold-500/20 hidden" id="lang-menu">
+                            <a href="../index.html" class="block px-4 py-2 text-sm text-ivory hover:text-gold-400 hover:bg-navy-700 transition">English</a>
+                            <a href="../zh/index.html" class="block px-4 py-2 text-sm text-ivory hover:text-gold-400 hover:bg-navy-700 transition">中文</a>
+                            <a href="index.html" class="block px-4 py-2 text-sm text-gold-400 bg-navy-700">日本語</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="md:hidden text-ivory" id="menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-navy-800 border-t border-gold-500/20" id="mobile-menu">
+            <div class="px-6 py-4 space-y-3">
+                <a href="index.html" class="block py-2 text-gold-400">ホーム</a>
+                <a href="team.html" class="block py-2 hover:text-gold-400 transition">チーム</a>
+                <a href="projects.html" class="block py-2 hover:text-gold-400 transition">プロジェクト</a>
+                <a href="contact.html" class="block py-2 hover:text-gold-400 transition">お問い合わせ</a>
+                <div class="border-t border-gold-500/20 pt-3 mt-3">
+                    <div class="text-xs text-gray-500 uppercase tracking-wider mb-2">Language</div>
+                    <div class="flex space-x-4">
+                        <a href="../index.html" class="text-ivory hover:text-gold-400 transition">EN</a>
+                        <a href="../zh/index.html" class="text-ivory hover:text-gold-400 transition">中文</a>
+                        <a href="index.html" class="text-gold-400">日本語</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-navy-900 text-ivory relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23c9a227\' fill-opacity=\'0.15\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        </div>
+        <div class="max-w-6xl mx-auto px-6 py-32 relative">
+            <div class="max-w-3xl">
+                <div class="flex items-center space-x-4 mb-8">
+                    <div class="h-px w-16 bg-gold-500"></div>
+                    <span class="text-gold-500 text-sm tracking-[0.3em] uppercase">Since 2018</span>
+                </div>
+                <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-medium leading-tight mb-8">
+                    技術を基盤に<br>
+                    <span class="text-gold-400">卓越を鍛造する</span>
+                </h1>
+                <p class="text-xl text-gray-300 leading-relaxed mb-12 max-w-2xl">
+                    私たちはエンタープライズグレードのソリューションに特化したエリート開発チームです。騎士道精神を持ち、厳格さ、革新性、卓越性を追求し、お客様に持続的な価値を創造します。
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="team.html" class="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-900 font-medium tracking-wide hover:bg-gold-400 transition-colors">
+                        チームを紹介
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                    <a href="projects.html" class="inline-flex items-center justify-center px-8 py-4 border border-ivory/30 text-ivory hover:border-gold-500 hover:text-gold-400 transition-colors">
+                        プロジェクト実績
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <section class="border-y border-navy-900/10 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4">
+                <div class="px-6 py-12 text-center border-r border-navy-900/10">
+                    <div class="font-display text-4xl md:text-5xl text-navy-800 mb-2">7+</div>
+                    <div class="text-sm tracking-wider text-gray-600 uppercase">年の経験</div>
+                </div>
+                <div class="px-6 py-12 text-center md:border-r border-navy-900/10">
+                    <div class="font-display text-4xl md:text-5xl text-navy-800 mb-2">30+</div>
+                    <div class="text-sm tracking-wider text-gray-600 uppercase">納品プロジェクト</div>
+                </div>
+                <div class="px-6 py-12 text-center border-r border-navy-900/10 border-t md:border-t-0">
+                    <div class="font-display text-4xl md:text-5xl text-navy-800 mb-2">20+</div>
+                    <div class="text-sm tracking-wider text-gray-600 uppercase">企業クライアント</div>
+                </div>
+                <div class="px-6 py-12 text-center border-t md:border-t-0">
+                    <div class="font-display text-4xl md:text-5xl text-navy-800 mb-2">99%</div>
+                    <div class="text-sm tracking-wider text-gray-600 uppercase">顧客満足度</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-24 bg-ivory">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 text-sm tracking-[0.3em] uppercase">Our Expertise</span>
+                <h2 class="font-display text-4xl md:text-5xl text-navy-900 mt-4">専門サービス</h2>
+                <div class="h-px w-24 bg-gold-500 mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-10 border border-navy-900/10 hover:border-gold-500/50 transition-colors group">
+                    <div class="w-14 h-14 bg-navy-900 text-gold-500 flex items-center justify-center mb-6 group-hover:bg-gold-500 group-hover:text-navy-900 transition-colors">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl text-navy-900 mb-4">エンタープライズアプリ開発</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        ERP、CRM、OAなどのコアビジネスシステムを含む、安定してスケーラブルなエンタープライズシステムを構築します。
+                    </p>
+                </div>
+
+                <div class="bg-white p-10 border border-navy-900/10 hover:border-gold-500/50 transition-colors group">
+                    <div class="w-14 h-14 bg-navy-900 text-gold-500 flex items-center justify-center mb-6 group-hover:bg-gold-500 group-hover:text-navy-900 transition-colors">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl text-navy-900 mb-4">クラウドアーキテクチャ</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        クラウドネイティブ技術に基づいた、高可用性で弾力的にスケーラブルな分散システムアーキテクチャソリューションを設計・実装します。
+                    </p>
+                </div>
+
+                <div class="bg-white p-10 border border-navy-900/10 hover:border-gold-500/50 transition-colors group">
+                    <div class="w-14 h-14 bg-navy-900 text-gold-500 flex items-center justify-center mb-6 group-hover:bg-gold-500 group-hover:text-navy-900 transition-colors">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M3 9h2m14 0h2M3 15h2m14 0h2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h0m6 0h0m-5 4h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl text-navy-900 mb-4">人工知能開発</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        機械学習、ディープラーニング、自然言語処理ソリューションを提供し、企業のインテリジェント化とデータ駆動型意思決定を支援します。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="py-24 bg-navy-900 text-ivory">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-gold-500 text-sm tracking-[0.3em] uppercase">Our Philosophy</span>
+                    <h2 class="font-display text-4xl md:text-5xl mt-4 mb-8">私たちの理念</h2>
+                    <div class="h-px w-24 bg-gold-500 mb-8"></div>
+                    <p class="text-xl text-gray-300 leading-relaxed mb-8">
+                        「技術の真の価値は、人類のためにより良い未来を創造することにあります。私たちは単にコードを書くだけでなく、人と可能性をつなぐ架け橋を築いています。」
+                    </p>
+                    <p class="text-gray-400 leading-relaxed">
+                        ArenaXでは、すべてのコードが卓越性の追求を体現しています。優れたソフトウェアは機能が完全であるだけでなく、職人技を反映すべきだと信じています—シンプルで、効率的で、時の試練に耐えうるものを。
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-navy-800 p-8 border-l-2 border-gold-500">
+                        <div class="font-display text-3xl text-gold-400 mb-3">厳格</div>
+                        <p class="text-gray-400 text-sm">細部への徹底したこだわり</p>
+                    </div>
+                    <div class="bg-navy-800 p-8 border-l-2 border-gold-500">
+                        <div class="font-display text-3xl text-gold-400 mb-3">革新</div>
+                        <p class="text-gray-400 text-sm">技術の限界を常に押し広げる</p>
+                    </div>
+                    <div class="bg-navy-800 p-8 border-l-2 border-gold-500">
+                        <div class="font-display text-3xl text-gold-400 mb-3">協調</div>
+                        <p class="text-gray-400 text-sm">チームの相乗効果で価値を創造</p>
+                    </div>
+                    <div class="bg-navy-800 p-8 border-l-2 border-gold-500">
+                        <div class="font-display text-3xl text-gold-400 mb-3">責任</div>
+                        <p class="text-gray-400 text-sm">結果に対する責任を持つ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-ivory border-t border-navy-900/10">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-display text-3xl md:text-4xl text-navy-900 mb-6">協業の準備はできていますか？</h2>
+            <p class="text-gray-600 mb-10 text-lg">
+                私たちのチームと深く交流し、あなたのビジョンを現実に変える方法を探りましょう
+            </p>
+            <a href="contact.html" class="inline-flex items-center px-10 py-4 bg-navy-900 text-ivory font-medium tracking-wide hover:bg-navy-800 transition-colors">
+                お問い合わせ
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-ivory py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div class="md:col-span-2">
+                    <div class="font-display text-2xl mb-4">
+                        <span class="text-gold-500">Arena</span><span class="text-navy-900" style="-webkit-text-stroke: 1px white; text-stroke: 1px white;">X</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed max-w-md">
+                        エンタープライズソフトウェアソリューションに特化したエリート開発チーム。騎士道精神と技術革新でビジネスの成長を加速します。
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-sm tracking-wider uppercase mb-6 text-gold-500">ナビゲーション</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="index.html" class="hover:text-gold-400 transition">ホーム</a></li>
+                        <li><a href="team.html" class="hover:text-gold-400 transition">チーム</a></li>
+                        <li><a href="projects.html" class="hover:text-gold-400 transition">プロジェクト</a></li>
+                        <li><a href="contact.html" class="hover:text-gold-400 transition">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm tracking-wider uppercase mb-6 text-gold-500">連絡先</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li>loricamarcelo@outlook.com</li>
+                        <li>世界各地</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-ivory/10 mt-12 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 ArenaX. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Language dropdown toggle
+        document.getElementById('lang-btn').addEventListener('click', function(e) {
+            e.stopPropagation();
+            document.getElementById('lang-menu').classList.toggle('hidden');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function() {
+            document.getElementById('lang-menu').classList.add('hidden');
+        });
+    </script>
+</body>
+</html>

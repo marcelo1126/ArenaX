@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コアチーム | ArenaX</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#0d1b2a',
+                            800: '#1b263b',
+                            700: '#1e3a5f',
+                            600: '#2d4a6f',
+                        },
+                        gold: {
+                            500: '#c9a227',
+                            400: '#d4b445',
+                            300: '#e0c76a',
+                        },
+                        ivory: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        serif: ['Inter', 'Noto Serif JP', 'sans-serif'],
+                        display: ['Inter', 'Noto Serif JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="font-serif bg-ivory text-navy-900">
+    <!-- Navigation -->
+    <nav class="bg-navy-900 text-ivory border-b border-gold-500/30 relative z-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="font-display text-2xl tracking-wide">
+                    <span class="text-gold-500">Arena</span><span class="text-navy-900" style="-webkit-text-stroke: 1px white; text-stroke: 1px white;">X</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-12">
+                    <a href="index.html" class="nav-link">ホーム</a>
+                    <a href="team.html" class="nav-link active">チーム</a>
+                    <a href="projects.html" class="nav-link">プロジェクト</a>
+                    <a href="contact.html" class="nav-link">お問い合わせ</a>
+                </div>
+                <div class="hidden md:flex items-center ml-8 border-l border-gold-500/30 pl-8">
+                    <div class="relative" id="lang-dropdown">
+                        <button class="flex items-center text-sm text-ivory hover:text-gold-400 transition" id="lang-btn">
+                            <span>日本語</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-32 bg-navy-800 border border-gold-500/20 hidden" id="lang-menu">
+                            <a href="../team.html" class="block px-4 py-2 text-sm text-ivory hover:text-gold-400 hover:bg-navy-700 transition">English</a>
+                            <a href="../zh/team.html" class="block px-4 py-2 text-sm text-ivory hover:text-gold-400 hover:bg-navy-700 transition">中文</a>
+                            <a href="team.html" class="block px-4 py-2 text-sm text-gold-400 bg-navy-700">日本語</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="md:hidden text-ivory" id="menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-navy-800 border-t border-gold-500/20" id="mobile-menu">
+            <div class="px-6 py-4 space-y-3">
+                <a href="index.html" class="block py-2 hover:text-gold-400 transition">ホーム</a>
+                <a href="team.html" class="block py-2 text-gold-400">チーム</a>
+                <a href="projects.html" class="block py-2 hover:text-gold-400 transition">プロジェクト</a>
+                <a href="contact.html" class="block py-2 hover:text-gold-400 transition">お問い合わせ</a>
+                <div class="border-t border-gold-500/20 pt-3 mt-3">
+                    <div class="text-xs text-gray-500 uppercase tracking-wider mb-2">Language</div>
+                    <div class="flex space-x-4">
+                        <a href="../team.html" class="text-ivory hover:text-gold-400 transition">EN</a>
+                        <a href="../zh/team.html" class="text-ivory hover:text-gold-400 transition">中文</a>
+                        <a href="team.html" class="text-gold-400">日本語</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-navy-900 text-ivory py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-center space-x-4 mb-6">
+                <div class="h-px w-16 bg-gold-500"></div>
+                <span class="text-gold-500 text-sm tracking-[0.3em] uppercase">Our Team</span>
+            </div>
+            <h1 class="font-display text-5xl md:text-6xl font-medium mb-6">コアチーム</h1>
+            <p class="text-xl text-gray-300 max-w-2xl">
+                深い技術的専門知識とプロフェッショナルな卓越性を持つ業界のエリートを集め、すべてのプロジェクトに卓越した品質を提供します
+            </p>
+        </div>
+    </header>
+
+    <!-- Leadership Section -->
+    <section class="py-20 bg-white border-b border-navy-900/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 text-sm tracking-[0.3em] uppercase">Leadership</span>
+                <h2 class="font-display text-3xl md:text-4xl text-navy-900 mt-4">リーダーシップチーム</h2>
+                <div class="h-px w-24 bg-gold-500 mx-auto mt-6"></div>
+            </div>
+
+            <!-- Founder/CEO -->
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+                <div class="order-2 lg:order-1">
+                    <span class="text-gold-500 text-sm tracking-wider uppercase">創立者 & チームマネージャー</span>
+                    <h3 class="font-display text-4xl text-navy-900 mt-2 mb-6">Kile</h3>
+                    <div class="h-px w-16 bg-gold-500 mb-6"></div>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        7年のソフトウェア開発とアーキテクチャ設計の経験を持ち、複数のテック企業でコア開発エンジニアおよび技術リーダーを務めました。エンタープライズアプリケーションのアーキテクチャ設計と技術チームマネジメントに注力し、多数の大規模プロジェクトの納品をリードしてきました。
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        北京科技大学でコンピュータサイエンスを専攻し卒業。技術革新とエンジニアリング実践の完璧な融合に情熱を注いでいます。「技術は人に奉仕する」という信念のもと、責任感と能力を兼ね備えたエリートチームの構築に尽力しています。
+                    </p>
+                    <div class="flex items-center space-x-6">
+                        <div class="text-center">
+                            <div class="font-display text-2xl text-navy-800">6+</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wider">年の経験</div>
+                        </div>
+                        <div class="h-8 w-px bg-navy-900/20"></div>
+                        <div class="text-center">
+                            <div class="font-display text-2xl text-navy-800">10+</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wider">プロジェクト</div>
+                        </div>
+                        <div class="h-8 w-px bg-navy-900/20"></div>
+                        <div class="text-center">
+                            <div class="font-display text-2xl text-navy-800">USTB</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wider">大学</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <div class="relative group">
+                        <div class="aspect-[4/5] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="w-32 h-32 bg-navy-700 group-hover:bg-navy-600 rounded-full flex items-center justify-center transition-colors">
+                                <span class="font-display text-5xl text-gold-500">K</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                        <div class="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-gold-500"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Members Section -->
+    <section class="py-20 bg-ivory">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 text-sm tracking-[0.3em] uppercase">Core Members</span>
+                <h2 class="font-display text-3xl md:text-4xl text-navy-900 mt-4">コアメンバー</h2>
+                <div class="h-px w-24 bg-gold-500 mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Member 1 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors" style="border: 2px solid #b8860b; box-shadow: inset 0 0 0 3px #1e3a5f, inset 0 0 0 4px #b8860b;">
+                                    <span class="font-display text-2xl text-gold-500">C</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">テックリード</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Conan</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            8年のデータエンジニア経験<br>
+                            AI/ML/DL/NLPエキスパート
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors border border-gold-500">
+                                    <span class="font-display text-2xl text-gold-500">A</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                        <!-- Hover Overlay -->
+                        <div class="absolute inset-0 bg-navy-900/95 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center p-4 border border-gold-500/30">
+                                <p class="text-gold-400 font-display text-lg">香港数学オリンピック準優勝</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">チーフ数学サイエンティスト(修士)</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Ada</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            7年の数学モデリング経験<br>
+                            AI/ML/DL/NLPエキスパート
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">M</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">チーフバックエンドエンジニア</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Maya</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            6年のバックエンド開発経験<br>
+                            C/C++/Java/Python/Golangエキスパート
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">A</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">チーフフルスタックエンジニア</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Alex</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            6年のフルスタック開発経験<br>
+                            Java/Python/React/Node.jsエキスパート
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 5 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">E</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">シニア物理学サイエンティスト(修士)</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Elon</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            7年の物理モデリング経験<br>
+                            アルゴリズム設計エキスパート
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 6 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">S</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">シニア数学サイエンティスト(修士)</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Sam</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            8年の数学モデリング経験<br>
+                            AI/ML/DL/NLPエキスパート
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 7 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors border border-gold-500">
+                                    <span class="font-display text-2xl text-gold-500">P</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                        <!-- Hover Overlay -->
+                        <div class="absolute inset-0 bg-navy-900/95 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center p-4 border border-gold-500/30">
+                                <p class="text-gold-400 font-display text-lg">SCI論文高スコア発表者</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">シニア数学サイエンティスト(修士)</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Pinn</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            8年の数学モデリング経験<br>
+                            AI/ML/DL/NLPエキスパート
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 8 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">Z</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">シニアバックエンドエンジニア</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Z</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            6年のバックエンド開発経験<br>
+                            Web scraping/Data extraction
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 9 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">D</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">シニアバックエンドエンジニア</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Dash</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            4年のバックエンド開発経験<br>
+                            Python/Node.js/Golang
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 10 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">B</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">バックエンドエンジニア</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Bee</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            4年のバックエンド開発経験<br>
+                            Python/Node.js/Web scraping
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 11 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">C</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">バックエンドエンジニア</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Corn</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            2年のバックエンド開発経験<br>
+                            Python/Node.js/Java
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 12 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <div class="aspect-[3/4] bg-navy-800 flex items-center justify-center group-hover:bg-navy-700 transition-colors">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-navy-700 group-hover:bg-navy-600 rounded-full mx-auto mb-3 flex items-center justify-center transition-colors">
+                                    <span class="font-display text-2xl text-gold-500">N</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent h-20"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-gold-500 text-xs tracking-wider uppercase">バックエンドエンジニア</span>
+                        <h3 class="font-display text-xl text-navy-900 mt-1">Newbie</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                            2年のバックエンド開発経験<br>
+                            Python/Node.js/Golang
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20 bg-navy-900 text-ivory">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 text-sm tracking-[0.3em] uppercase">Our Culture</span>
+                <h2 class="font-display text-3xl md:text-4xl mt-4">チーム文化</h2>
+                <div class="h-px w-24 bg-gold-500 mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8">
+                    <div class="w-16 h-16 border border-gold-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl text-gold-400 mb-4">品質第一</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        コード品質に対してほぼ厳格な基準を持ち、すべてのコード行を厳密にレビューし、時の試練に耐える製品を納品します。
+                    </p>
+                </div>
+
+                <div class="text-center p-8">
+                    <div class="w-16 h-16 border border-gold-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl text-gold-400 mb-4">継続的学習</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        技術は常に進化しており、私たちも同様です。チームメンバーが継続的に学び、知識を共有し、業界のトレンドに敏感であることを奨励しています。
+                    </p>
+                </div>
+
+                <div class="text-center p-8">
+                    <div class="w-16 h-16 border border-gold-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl text-gold-400 mb-4">協調的成功</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        チームの力は個人の力を超えると信じています。効率的なコラボレーションを通じて、すべてのメンバーの強みが最大限に発揮されるようにしています。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us CTA -->
+    <section class="py-20 bg-ivory border-t border-navy-900/10">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-display text-3xl md:text-4xl text-navy-900 mb-6">参加しませんか</h2>
+            <p class="text-gray-600 mb-10 text-lg">
+                私たちは常に志を同じくする優秀な人材を探しています。卓越性を追求する姿勢をお持ちなら、ArenaXへようこそ
+            </p>
+            <a href="contact.html" class="inline-flex items-center px-10 py-4 bg-navy-900 text-ivory font-medium tracking-wide hover:bg-navy-800 transition-colors">
+                お問い合わせ
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-ivory py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div class="md:col-span-2">
+                    <div class="font-display text-2xl mb-4">
+                        <span class="text-gold-500">Arena</span><span class="text-navy-900" style="-webkit-text-stroke: 1px white; text-stroke: 1px white;">X</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed max-w-md">
+                        エンタープライズソフトウェアソリューションに特化したエリート開発チーム。騎士道精神と技術革新でビジネスの成長を加速します。
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-sm tracking-wider uppercase mb-6 text-gold-500">ナビゲーション</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="index.html" class="hover:text-gold-400 transition">ホーム</a></li>
+                        <li><a href="team.html" class="hover:text-gold-400 transition">チーム</a></li>
+                        <li><a href="projects.html" class="hover:text-gold-400 transition">プロジェクト</a></li>
+                        <li><a href="contact.html" class="hover:text-gold-400 transition">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm tracking-wider uppercase mb-6 text-gold-500">連絡先</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li>loricamarcelo@outlook.com</li>
+                        <li>世界各地</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-ivory/10 mt-12 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 ArenaX. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        document.getElementById('lang-btn').addEventListener('click', function(e) {
+            e.stopPropagation();
+            document.getElementById('lang-menu').classList.toggle('hidden');
+        });
+        document.addEventListener('click', function() {
+            document.getElementById('lang-menu').classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
