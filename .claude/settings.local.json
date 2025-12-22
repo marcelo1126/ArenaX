@@ -23,7 +23,8 @@
       "Bash(git ls-tree:*)",
       "Bash(grep:*)",
       "Bash(python extract_files.py:*)",
-      "Bash(git clone:*)"
+      "Bash(git clone:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nMerge branch ''main'' - Resolve naming conflicts\n\n- Keep updated brand names \\(ArenaX Tech, ArenaX科技, ArenaXテック\\)\n- Integrate simplified page titles \\(Elite Team, 精英团队, エリートチーム\\)\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
     ]
   }
 }
